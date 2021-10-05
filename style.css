@@ -147,6 +147,14 @@ section .title::after{
     cursor: pointer;
     display: none;
 }
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
 .scroll-up-btn{
     position: fixed;
     height: 45px;
@@ -166,14 +174,8 @@ section .title::after{
     pointer-events: none;
     transition: all 0.3s ease;
 }
-.scroll-up-btn.show{
-    bottom: 30px;
-    opacity: 1;
-    pointer-events: auto;
-}
-.scroll-up-btn:hover{
-    filter: brightness(90%);
-}
+
+
 
 .download-btn {
     position: fixed;
@@ -182,34 +184,47 @@ section .title::after{
     bottom: 40px;
     left: 40px;
     line-height: 37px;
-    
-    z-index: 99999;
-    text-align: center;
-    font-weight: 600;
-    font-size: 12px;
-    border-radius: 6px;
     cursor: pointer;
     opacity: 0;
-    align-content: center;
     pointer-events: none;
-    transition: all 0.3s ease 0s;
+    z-index: 99999;
+    text-align: center;
+    transition: all 0.3s ease;
+    
+   
+    
+    
+ 
+}
+.download-btn  a{
     display: inline-block;
-    background: rgb(255, 255, 255);
-    border: 2px solid rgb(39, 183, 122);
+    background: none;
+    color: #27b77a;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0 5px;
+    
+    border-radius: 6px;
+   
+    border: 2px solid #27b77a;
+   
+    
 }
-.download-btn a{
+.download-btn a:hover{
     color: #111;
+    background: #27b77a;
+    border-color: #111;
 }
+
+/* .download-btn a{
+    color: #111;
+} */
 .download-btn.show{
     bottom: 30px;
     opacity: 1;
     pointer-events: auto;
-}
-.download-btn:hover{
-    background: rgb(39, 183, 122);
-    border: 2px solid rgb(255, 255, 255);
-    color:white;
-}
+} 
+
 
 /* home section styling */
 
@@ -282,7 +297,7 @@ section .title::after{
     font-size: 27px;
     font-weight: 600;
     margin-bottom: 10px;
-    font-family: poppins;
+    font-family: 'poppins';
     
 }
 
@@ -293,7 +308,7 @@ section .title::after{
 
 .about .about-content .right p{
     text-align: justify;
-    font-family: Calibri;
+    font-family: 'Calibri';
     font-size:20px;
 }
 .about .about-content .right a{
@@ -306,7 +321,7 @@ section .title::after{
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid #27b77a;
-    transition: all 0.3s ease;
+    
 }
 .about .about-content .right a:hover{
     color: #27b77a;
